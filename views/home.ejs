@@ -1,0 +1,33 @@
+<%- include("header")%>
+<div class="home">
+    <div class="home-head">   
+         <h1>Home</h1>
+       <a href="/upload"><button type="button" class="btn btn-primary">Sell a Product</button></a>
+        <h2>Browse Products</h2>
+       <div class="container">
+        <div class="row">
+        <%posts.forEach(function(ele){%>
+            <%if(ele.imageBase64){%>
+                
+                <div class="col-lg-4 justify-content-center">
+                   <div class="cent">
+                    <div class="card" style="width: 25rem;">
+                        <img src="data:<%=ele.contentType%>;base64,<%=ele.imageBase64%>" class="post-img card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title"><%=ele.ProductName%></h5>
+                          <p class="card-text"><%=ele.About%></p>
+                          <p class="card-text">Contact: <%=ele.contact%></p>
+                          <p class="card-text">Email: <%=ele.email%></p>
+
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            <%}%>
+            <%})%>
+      
+    </div>
+    </div>
+</div>
+</div>
+<%- include("footer")%>

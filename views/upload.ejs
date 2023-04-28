@@ -1,0 +1,33 @@
+<%- include("header")%>
+<div class="up">
+    <form action="/upload" method="POST"  method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="pn" class="form-label">Product Name:</label>
+          <input name="pn" type="text" class="form-control" id="pn">
+        </div>
+        <div class="mb-3">
+          <label for="abt" class="form-label">About:</label>
+          <textarea name="abt" type="text" class="form-control" id="abt" rows="6" cols="50">hey</textarea>
+        </div>
+    
+        <div class="mb-3">
+            <label for="pi" class="form-label">Product Image:</label>
+            <input name="pi" type="file" class="form-control" id="pi">
+          </div>
+
+          <div class="mb-3">
+            <label for="pp" class="form-label">Contact no:</label>
+            <input name="pc" type="text" class="form-control" id="pp">
+          </div>
+
+          <div class="mb-3">
+            <label for="pe" class="form-label">Email:</label>
+            <input name="pe" type="text" class="form-control" id="pe">
+          </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    
+</div>
+
+<%- include("footer")%>
