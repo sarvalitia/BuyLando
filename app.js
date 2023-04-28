@@ -101,7 +101,7 @@ app.get("/home",async(req,res)=>{
 app.get("/upload",function(req,res){
     res.render("upload");
 })
-
+{}
 app.post("/upload",store.array('pi',12),function(req,res,next){
     console.log(req.files)
     const files=req.files;
